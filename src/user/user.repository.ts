@@ -1,3 +1,6 @@
+import { Injectable } from '@nestjs/common';
+
+@Injectable()
 export class UserRepository {
   private users = [
     {
@@ -9,6 +12,11 @@ export class UserRepository {
       name: 'Ezequias Sousa',
       email: 'ezequias@gmail.com',
       password: '123456',
+    },
+    {
+      name: 'Joao Carlos',
+      email: 'jcarlos@gmail.com',
+      password: '435678',
     },
   ];
 
