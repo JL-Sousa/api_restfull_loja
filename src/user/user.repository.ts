@@ -5,7 +5,7 @@ export class UserRepository {
   private users = [
     {
       name: 'Jonyelson Lopes',
-      email: 'rose@gmail.com',
+      email: 'jonyelson@gmail.com',
       password: '1234',
     },
     {
@@ -26,5 +26,11 @@ export class UserRepository {
 
   async list() {
     return this.users;
+  }
+
+  async existsWithEmail(email: string) {
+    const userExists = this.users.find((user) => user.email === email);
+
+    return userExists !== undefined;
   }
 }
